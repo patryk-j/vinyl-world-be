@@ -4,6 +4,8 @@
 
 The goals and assumptions of the project can be found at the following address:
 
+1. Clone repository
+
     ```txt
-     https://github.com/patryk-j/vinyl-world-fe
+    git clone https://github.com/patryk-j/vinyl-world-fe/
     ```
