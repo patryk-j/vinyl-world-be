@@ -1,0 +1,89 @@
+###
+GET http://localhost:5000/auth/users
+ 
+###
+GET http://localhost:5000/auth/vinyls
+ 
+###
+POST http://localhost:5000/auth/register
+content-type: application/json
+
+{
+  "name": "test",
+  "email": "test@test.com",
+  "password": "Test1234"
+}
+
+###
+POST http://localhost:5000/auth/login
+content-type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "Qwerty12#"
+}
+
+###
+POST http://localhost:5000/adminpanel/add
+content-type: application/json
+
+{
+  "artist": "Artysta",
+  "title": "Tytuł",
+  "image": '',
+}
+
+###
+GET http://localhost:5000/adminpanel/getVinyls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+###
+DELETE http://localhost:5000/adminpanel/deleteVinyl
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+{
+    "_id": "6494a062c1d984583ab70c1f"
+}
+
+###
+POST http://localhost:5000/profile/addReservation
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc1MjY5OTB9.VP4OlXl1JBvtaDb1wYTH36MiDQvRhcz3pLbVXFKtbfg
+content-type: application/json
+
+{
+  "vinylId": "64958421a8614b8f17527919",
+  "rentalDate": "test",
+  "title": "tytul",
+  "artist": "artist"
+}
+
+###
+GET http://localhost:5000/profile/getReservations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+###
+DELETE http://localhost:5000/adminpanel/deleteReservation
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+{
+    "_id": "649937a56c9861ced705a9c8"
+}
+
+###
+GET http://localhost:5000/profile/getUserReservations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+###
+GET http://localhost:5000/adminpanel/getUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
+
+###
+PUT http://localhost:5000/profile/updateEmail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2ODc0NTI2MTB9.tFXnOVkoB5wHBPaf9b3D9esnJb3WWyaefl-2ZLxG55o
+content-type: application/json
